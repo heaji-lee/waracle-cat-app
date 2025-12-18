@@ -44,8 +44,7 @@ A modern web app to manage, vote on, and favourite cat images. Users can upload 
 1. Clone the repository: 
 
 ```bash
-git clone https://github.com/{}/
-cd-cat-aapp
+git clone https://github.com/heaji-lee/waracle-cat-app.git
 ```
 
 2. Install dependencies:
