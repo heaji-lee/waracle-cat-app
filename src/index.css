@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+* {
+  cursor: url("../src/assets/images/pawcursor.png") 16 16, auto !important
+}
 
 body {
   @apply bg-linear-to-br from-blue-200 via-green-100 to-yellow-100 min-h-screen;
