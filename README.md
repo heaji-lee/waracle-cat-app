@@ -104,6 +104,6 @@ This app will run at `http://localhost:5173` (or the port you Vite config specif
 - Skeleton loaders for image fetching. 
 - Dark mode toggle for better UX.
 - Implement pagination when fetching cats.
-- Making it more responsible on various screen sizes.
-
+- More responsive on various screen sizes.
+- Search page to search for a cat image based on parama.
 
