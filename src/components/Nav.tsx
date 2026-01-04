@@ -9,9 +9,9 @@ export default function Nav() {
   const [helpOpen, setHelpOpen] = useState(false);
 
   return (
-    <div className="w-40 sm:w-50 md:w-60 bg-gray-800 text-white h-full flex flex-col p-6 items-center z-50 font-[Galindo]">
+    <div className="w-14 sm:w-40 md:w-60 bg-gray-800 text-white h-full flex flex-col p-4 sm:p-6 items-center z-50 font-[Galindo]">
       <Link to="/" className="w-full">
-        <Card className="w-30 h-30 mb-6 mx-auto overflow-hidden rounded-5xl relative">
+        <Card className="w-10 h-10 sm:w-20 sm:h-20 mb-6 mx-auto overflow-hidden rounded-5xl relative">
           <img
             src={MooLogo}
             alt="Cat Logo"
@@ -29,9 +29,9 @@ export default function Nav() {
           <li key={item.to} className="w-full">
             <Link
               to={item.to}
-              className="flex items-center justify-center gap-2 w-full px-4 py-2 rounded hover:bg-gray-700"
+              className="flex items-center justify-center gap-0 sm:gap-2 w-full px-0 sm:px-4 py-2 rounded hover:bg-gray-700"
             >
-              <div className="flex flex-col items-center gap-1">
+              <div className="flex flex-col items-center gap-0 sm:gap-1">
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -46,20 +46,20 @@ export default function Nav() {
                 </div>
 
                 <div>
-                  <span>{item.label}</span>
+                  <span className="hidden sm:inline">{item.label}</span>
                 </div>
               </div>
-              
+
             </Link>
           </li>
         ))}
       </ul>
       <div className="mt-auto p-4">
         <Button variant="secondary" onClick={() => setHelpOpen(true)}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
           </svg>
-          Need help?
+          <span className="hidden sm:inline">Need help?</span>
         </Button>
 
         <HelpModal isOpen={helpOpen} setIsOpen={setHelpOpen} />

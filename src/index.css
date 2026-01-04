@@ -1,17 +1,24 @@
 @import "tailwindcss";
-@import "@heroui/styles"; 
-* {
-  cursor: url("../src/assets/images/pawcursor.png") 16 16, auto !important
-}
+@import "@heroui/styles";
 
-body {
-  @apply bg-linear-to-br from-blue-200 via-green-100 to-yellow-100 min-h-screen;
-}
+@layer base {
+  * {
+    cursor: url("../src/assets/images/pawcursor.png") 16 16, auto !important;
+  }
 
-h1 {
-  @apply text-5xl font-extrabold text-green-900 font-[BBH_Bartle];
-}
+  body {
+    @apply bg-linear-to-br from-blue-200 via-green-100 to-yellow-100 min-h-screen;
+  }
 
-p, label, button, h3, span, modal-heading {
-  @apply font-[Galindo];
+  h1 {
+    @apply text-xl sm:text-sm md:text-3xl lg:text-5xl font-extrabold text-green-900 font-[BBH_Bartle];
+  }
+
+  p,
+  label,
+  button,
+  h3,
+  span {
+    @apply font-[Galindo];
+  }
 }
